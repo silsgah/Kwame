@@ -213,8 +213,15 @@ angular.module('starter.controllers', [])
    //     })
    // }
 })
-.controller('loginCtrl', function ($scope) {
-   
+.controller('loginCtrl', function ($scope, EmployeeService) {
+    var findAllEmployees = function () {
+        EmployeeService.findpastors().then(function (pastors) {
+            $scope.imagelist = pastors;
+
+        });
+    }
+
+    findAllEmployees();
     //var isOnline = $cordovaNetwork.isOnline();
     //var isOffline = $cordovaNetwork.isOffline();
     //if (isOffline) {

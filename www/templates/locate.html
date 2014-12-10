@@ -8,10 +8,13 @@
    
   <ion-content class="has-header">
   
- <div class="bar bar-loading bar-assertive" ng-if="data.isLoading">
-      connecting...
-    </div>
- <div id="map" data-tap-disabled="true"></div> 
+      <ion-item ng-repeat="listitems in imagelist">
+  
+       <div class="details">
+          <img ng-src="pics/{{listitems.pic}}" width="120" height="100"/>
+           <h4>{{listitems.firstName }}</h4>
+      </div>
+      </ion-item>
      
   </ion-content>
 </ion-view>
