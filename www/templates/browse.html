@@ -1,0 +1,17 @@
+<ion-view title="iKwamena weds Stella">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+     
+     <ion-item ng-repeat="listitems in imagelist">
+   
+       <div class="details">
+          <img ng-src="pics/{{listitems.pic}}" width="120" height="100"/>
+           <h4>{{listitems.firstName }}</h4>
+      </div>
+      </ion-item>
+       
+  </ion-content>
+</ion-view>
+

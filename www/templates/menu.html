@@ -1,0 +1,31 @@
+<ion-side-menus>
+
+  <ion-pane ion-side-menu-content>
+    <ion-nav-bar class="bar-stable nav-title-slide-ios7">
+      <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i> Back</ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+  </ion-pane>
+
+  <ion-side-menu side="left" class="bar-energized">
+    <header class="bar bar-header bar-energized">
+      <h1 class="title">Menu</h1>
+    </header>
+    <ion-content class="has-header">
+      <ion-list>
+        <ion-item nav-clear menu-close href="#/app/playlists">
+         <div class="button button-positive button-clear icon-left ion-ios7-home-outline"></div>  Home
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/login">
+        <div class="button button-positive button-clear icon-left ion-ios7-location-outline"></div> Location
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/search">
+       <div class="button button-positive button-clear icon-left ion-ios7-camera-outline"></div> Photo
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/browse">
+       <div class="button button-positive button-clear icon-left ion-ios7-people-outline"></div>  Priest
+        </ion-item>   
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

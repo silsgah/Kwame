@@ -1,0 +1,26 @@
+<ion-view title="iKwamena weds Stella">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="has-header">
+       <div class="bar bar-sub-header bar-energized">
+          <div class="button-bar">
+            <a href="#" class="button button-positive button-clear icon-left ion-ios7-location-outline" ng-click="showLocation()">Location</a>
+            <a href="#" class="button button-positive button-clear icon-left ion-ios7-alarm" ng-click="showOptions()">Date</a>
+            <a href="#" class="button button-positive button-clear icon-left ion-ios7-people-outline" ng-click="showRSVP()">RSVP</a>
+          </div>
+        </div>
+        <div class="item item-image">
+    <img ng-src="img/kwame2.jpg">
+  </div>
+    <ion-list class="signup-background">
+     <a ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}" class="item item-icon-left item-icon-right">
+    <i class="icon ion-android-folder"></i>
+   {{playlist.title}}
+    <i class="icon ion-arrow-right-c"></i>
+  </a> 
+    </ion-list>
+
+  </ion-content>
+ 
+</ion-view>
