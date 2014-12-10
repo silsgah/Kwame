@@ -18,4 +18,6 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
+  
+  <icon src="Android/drawable-xhdpi/icon.png" gap:platform="android" gap:density="xhdpi" />
 </widget>

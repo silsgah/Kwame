@@ -213,42 +213,42 @@ angular.module('starter.controllers', [])
    //     })
    // }
 })
-.controller('loginCtrl', function ($scope, $cordovaNetwork, $cordovaToast) {
+.controller('loginCtrl', function ($scope) {
    
-    var isOnline = $cordovaNetwork.isOnline();
-    var isOffline = $cordovaNetwork.isOffline();
-    if (isOffline) {
-        $cordovaToast.show('No Internet Connection', 'long', 'center');
-        $scope.data = {
-            isLoading: true
-        };
-        return;
-    } else if (isOnline) {
-        $scope.data = {
-            isLoading: false
-        };
-        $cordovaToast.show('Getting location', 'long', 'center');
-        var map;
-        navigator.geolocation.getCurrentPosition(function (position) {
-            var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            var mapOptions = {
-                center: geolocate,
-                zoom: 15,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
+    //var isOnline = $cordovaNetwork.isOnline();
+    //var isOffline = $cordovaNetwork.isOffline();
+    //if (isOffline) {
+    //    $cordovaToast.show('No Internet Connection', 'long', 'center');
+    //    $scope.data = {
+    //        isLoading: true
+    //    };
+    //    return;
+    //} else if (isOnline) {
+    //    $scope.data = {
+    //        isLoading: false
+    //    };
+    //    $cordovaToast.show('Getting location', 'long', 'center');
+    //    var map;
+    //    navigator.geolocation.getCurrentPosition(function (position) {
+    //        var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    //        var mapOptions = {
+    //            center: geolocate,
+    //            zoom: 15,
+    //            mapTypeId: google.maps.MapTypeId.ROADMAP
+    //        };
 
-            map = new google.maps.Map(document.getElementById("map"), mapOptions);
-            map.setCenter(geolocate);
-            var marker = new google.maps.Marker({
-                position: geolocate,
-                map: map,
-                title: "You are here!"
-            });
+    //        map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    //        map.setCenter(geolocate);
+    //        var marker = new google.maps.Marker({
+    //            position: geolocate,
+    //            map: map,
+    //            title: "You are here!"
+    //        });
 
-        });
+    //    });
 
-        $scope.map = map;
-    }
+    //    $scope.map = map;
+    //}
       
   
 })
