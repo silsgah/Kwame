@@ -332,7 +332,7 @@ angular.module('starter.controllers', [])
         $ionicActionSheet.show({
             titleText: 'iKwamena weds Stella',
             buttons: [
-              { text: 'Date : 26th December, 2014 ' },
+              { text: 'Date :11:00 AM 26th December, 2014 ' },
               { text: 'Location : Sekondi-Takoradi ' },
             ],
             //destructiveText: 'Delete',
