@@ -282,8 +282,8 @@ angular.module('starter.controllers', [])
         $ionicActionSheet.show({
             titleText: 'iKwamena weds Stella',
             buttons: [
-              { text: 'Nobert Arthur' },
-              { text: 'Prudence Lamptey' }
+              { text: 'Mr John Arthur : 0244170146' },
+              { text: 'William Arthur : 0244926465' }
 
             ],
             //destructiveText: 'Delete',
