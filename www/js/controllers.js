@@ -215,9 +215,8 @@ angular.module('starter.controllers', [])
 })
 .controller('loginCtrl', function ($scope, EmployeeService) {
     var findAllEmployees = function () {
-        EmployeeService.findpastors().then(function (pastors) {
-            $scope.imagelist = pastors;
-
+        EmployeeService.findguest().then(function (guest) {
+            $scope.imagelist = guest;
         });
     }
 

@@ -11,12 +11,14 @@ angular.module('directory.services', [])
             
         ];
         var pastors = [
-     
-              { "id": 1, "firstName": "Rev. Father Anthony Eshun", "pic": "bg4.png" },
-              { "id": 1, "firstName": "Rev. Father Kofi Anthur", "pic": "bg4.png" },
-              { "id": 1, "firstName": "Rev. Father Baido", "pic": "bg4.png" },
-              { "id": 1, "firstName": "Rev. Father Bernard Akwasi Abeka", "pic": "bg4.png" }
-
+              { "id": 1, "firstName": "Rev. Father Anthony Eshun", "pic": "bg5.png" },
+              { "id": 2, "firstName": "Rev. Father Kofi Anthur", "pic": "bg6.png" },
+              { "id": 3, "firstName": "Rev. Father Baido", "pic": "bg4.png" }
+        ];
+        var guest = [
+             { "id": 1, "firstName": "Name of Person", "pic": "bg7.png" },
+             { "id": 2, "firstName": "Name of Person", "pic": "bg8.png" }
+           
         ];
         // We use promises to make this api asynchronous. This is clearly not necessary when using in-memory data
         // but it makes this service more flexible and plug-and-play. For example, you can now easily replace this
@@ -33,8 +35,12 @@ angular.module('directory.services', [])
                 var deferred = $q.defer();
                 deferred.resolve(pastors);
                 return deferred.promise;
+            },
+            findguest: function () {
+                var deferred = $q.defer();
+                deferred.resolve(guest);
+                return deferred.promise;
             }
-           
         }
 
     });
