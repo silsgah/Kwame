@@ -32,21 +32,34 @@ angular.module('starter.controllers', [])
   //  }, 1000);
   //};
 })
-.controller('PictureCtrl', function ($scope, EmployeeService) {
+.controller('PictureCtrl', function ($scope, EmployeeService, TDCardDelegate) {
          $scope.data = {
                 isLoading: true
-            };
+         };
+         var cardTypes = [];
     var findAllEmployees = function () {
         EmployeeService.findAll().then(function (employees) {
             $scope.imagelist = employees;
-           
+            cardTypes = employees;
         });
     }
-
+ 
     findAllEmployees();
     $scope.data = {
         isLoading: false
     };
+    
+    $scope.cards = Array.prototype.slice.call(cardTypes, 0);
+
+    $scope.cardDestroyed = function (index) {
+        $scope.cards.splice(index, 1);
+    };
+
+    $scope.addCard = function () {
+        var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
+        newCard.id = Math.random();
+        $scope.cards.push(angular.extend({}, newCard));
+    }
     //if ($cordovaNetwork.isOffline()) {
     //    $cordovaToast.show('No Internet Connection', 'long', 'center');
     //    $scope.data = {
@@ -165,6 +178,16 @@ angular.module('starter.controllers', [])
     //    }
 
     //}
+})
+.controller('CardCtrl', function($scope, TDCardDelegate) {
+    $scope.cardSwipedLeft = function(index) {
+        console.log('LEFT SWIPE');
+        $scope.addCard();
+    };
+    $scope.cardSwipedRight = function(index) {
+        console.log('RIGHT SWIPE');
+        $scope.addCard();
+    };
 })
 .controller('MainCtrl', function ($scope, EmployeeService) {
     $scope.data = {
@@ -351,8 +374,20 @@ angular.module('starter.controllers', [])
 
         });
     };
+})
+.directive('noScroll', function ($document) {
+
+        return {
+            restrict: 'A',
+            link: function ($scope, $element, $attr) {
+
+                $document.on('touchmove', function (e) {
+                    e.preventDefault();
+                });
+            }
+        }
     })
-.controller('PlaylistCtrl', function ($scope, $cordovaCamera, $cordovaToast, $http, $ionicLoading, $stateParams, $ionicActionSheet) {
+.controller('PlaylistCtrl', function ($scope, $cordovaCamera, $cordovaToast, $http, $stateParams, $ionicActionSheet) {
   
     $scope.showOptions = function () {
         $ionicActionSheet.show({
