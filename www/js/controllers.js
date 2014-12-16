@@ -32,16 +32,11 @@ angular.module('starter.controllers', [])
   //  }, 1000);
   //};
 })
-.controller('PictureCtrl', function ($scope, EmployeeService, TDCardDelegate) {
+.controller('PictureCtrl', function ($scope, EmployeeService) {
          $scope.data = {
                 isLoading: true
          };
-         var cardTypes = [
-    { image: "pics/bg2.png" },
-    { image: 'pics/bg3.png' },
-    { image: 'pics/bg5.png' },
-    { image: 'pics/bg6.png' }
-         ];
+       
     var findAllEmployees = function () {
         EmployeeService.findAll().then(function (employees) {
             $scope.imagelist = employees;
@@ -53,18 +48,7 @@ angular.module('starter.controllers', [])
     $scope.data = {
         isLoading: false
     };
-    
-    $scope.cards = Array.prototype.slice.call(cardTypes, 0);
-
-    $scope.cardDestroyed = function (index) {
-        $scope.cards.splice(index, 1);
-    };
-
-    $scope.addCard = function () {
-        var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
-        newCard.id = Math.random();
-        $scope.cards.push(angular.extend({}, newCard));
-    }
+   
     //if ($cordovaNetwork.isOffline()) {
     //    $cordovaToast.show('No Internet Connection', 'long', 'center');
     //    $scope.data = {
@@ -285,7 +269,7 @@ angular.module('starter.controllers', [])
       
   
 })
-.controller('listsCtrl', function ($scope, $ionicActionSheet) {
+.controller('listsCtrl', function ($scope, $ionicActionSheet,TDCardDelegate) {
     //, $ionicPopup
     //if (window.Connection) {
     //    if (navigator.connection.type == Connection.NONE) {
@@ -301,9 +285,29 @@ angular.module('starter.controllers', [])
     //    }
     //}
 
-    $scope.playlists = [
-          { title: 'Take a nice looking picture', id: 1 }
+    //$scope.playlists = [
+    //      { title: 'Take a nice looking picture', id: 1 }
+    //];
+    var cardTypes = [
+   { image: "pics/bg2.png" },
+   { image: 'pics/bg3.png' },
+   { image: 'pics/bg5.png' },
+   { image: 'pics/bg7.png' },
+   { image: 'pics/bg8.png' }
+   { image: 'pics/bg6.png' }
     ];
+    
+    $scope.cards = Array.prototype.slice.call(cardTypes, 0);
+
+    $scope.cardDestroyed = function (index) {
+        $scope.cards.splice(index, 1);
+    };
+
+    $scope.addCard = function () {
+        var newCard = cardTypes[Math.floor(Math.random() * cardTypes.length)];
+        newCard.id = Math.random();
+        $scope.cards.push(angular.extend({}, newCard));
+    }
     $scope.showRSVP = function () {
         $ionicActionSheet.show({
             titleText: 'iKwamena weds Stella',
