@@ -16,8 +16,8 @@ angular.module('directory.services', [])
               { "id": 3, "firstName": "Rev. Father Baido", "pic": "bg4.png" }
         ];
         var guest = [
-             { "id": 1, "firstName": "Name of Person", "pic": "bg7.png" },
-             { "id": 2, "firstName": "Name of Person", "pic": "bg8.png" }
+             { "id": 1, "firstName": "Constantine Kojo Mawuena Kudzedzi","Position":"An Accomplish lawyer by all standard", "pic": "bg7.png" },
+             { "id": 2, "firstName": "Mrs Abena Asamoabea Osie Akoto","Position":"Director, Head Data Processing-GSS", "pic": "bg8.png" }
            
         ];
         // We use promises to make this api asynchronous. This is clearly not necessary when using in-memory data

@@ -219,7 +219,6 @@ angular.module('starter.controllers', [])
             $scope.imagelist = guest;
         });
     }
-
     findAllEmployees();
     //var isOnline = $cordovaNetwork.isOnline();
     //var isOffline = $cordovaNetwork.isOffline();
