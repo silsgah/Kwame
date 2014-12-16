@@ -36,7 +36,12 @@ angular.module('starter.controllers', [])
          $scope.data = {
                 isLoading: true
          };
-         var cardTypes = [];
+         var cardTypes = [
+    { image: "pics/bg2.png" },
+    { image: 'pics/bg3.png' },
+    { image: 'pics/bg5.png' },
+    { image: 'pics/bg6.png' }
+         ];
     var findAllEmployees = function () {
         EmployeeService.findAll().then(function (employees) {
             $scope.imagelist = employees;
