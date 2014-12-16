@@ -293,7 +293,7 @@ angular.module('starter.controllers', [])
    { image: 'pics/bg3.png' },
    { image: 'pics/bg5.png' },
    { image: 'pics/bg7.png' },
-   { image: 'pics/bg8.png' }
+   { image: 'pics/bg8.png' },
    { image: 'pics/bg6.png' }
     ];
     
