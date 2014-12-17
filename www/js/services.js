@@ -3,17 +3,23 @@ angular.module('directory.services', [])
     .factory('EmployeeService', function($q) {
 
         var employees = [
-            { "id": 1, "firstName": "Love is such a wonderful thing", "pic": "bg.png" },
-            { "id": 2, "firstName": "What God has put together", "pic": "bg2.png" },
-            { "id": 3, "firstName": "When you meet the right person", "pic": "bg3.png" },
-            { "id": 4, "firstName": "Life without love is", "pic": "bg4.png" }
+            { "id": 1, "firstName": "We accept the love we think, we deserve", "pic": "bg.png" },
+            { "id": 2, "firstName": "We go together like - copy & paste", "pic": "bg2.png" },
+            { "id": 3, "firstName": "He who kneels before God can stand before anyone", "pic": "bg3.png" },
+            { "id": 4, "firstName": "Life is short smile while u have teeth ", "pic": "bg9.png" },
+            { "id": 4, "firstName": "You'll never be braveif u dont get hurt", "pic": "bg10.png" },
+            { "id": 4, "firstName": "Wife or Mother, if it is both, he is twice blessed indeed", "pic": "bg10.png"},
+            { "id": 4, "firstName": "The perfect woman u se is working, not an iddler ", "pic": "bg12.png" },
+            { "id": 4, "firstName": "Great friends are hard to find", "pic": "bg13.png" },
+            { "id": 4, "firstName": "Hard Times reveal true friends", "pic": "bg14.png" }
+           
       
             
         ];
         var pastors = [
-              { "id": 1, "firstName": "Rev. Father Anthony Eshun", "pic": "bg5.png" },
-              { "id": 2, "firstName": "Rev. Father Kofi Anthur", "pic": "bg6.png" },
-              { "id": 3, "firstName": "Rev. Father Baido", "pic": "bg4.png" }
+              { "id": 1, "firstName": "Rev. Father Raphael Mensah", "pic": "bg5.png" },
+              { "id": 2, "firstName": "Rev. Father Eshun", "pic": "bg6.png" },
+              { "id": 3, "firstName": "Rev. Father Bernard Akwasi Abekah", "pic": "bg4.png" }
         ];
         var guest = [
              { "id": 1, "firstName": "Constantine Kojo Mawuena Kudzedzi","Position":"An Accomplish lawyer by all standard", "pic": "bg7.png" },

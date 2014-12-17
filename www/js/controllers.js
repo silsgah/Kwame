@@ -312,6 +312,7 @@ angular.module('starter.controllers', [])
         $ionicActionSheet.show({
             titleText: 'iKwamena weds Stella',
             buttons: [
+              { text: 'John Arthur : 0244926465' },
               { text: 'Norbet Arthur : 0203301012' },
               { text: 'Prudence Lamptey : 027366909' },
               { text: 'Wilhelmina Arthur : 0244927465' }
