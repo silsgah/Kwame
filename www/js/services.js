@@ -8,7 +8,7 @@ angular.module('directory.services', [])
             { "id": 3, "firstName": "He who kneels before God can stand before anyone", "pic": "bg3.png" },
             { "id": 4, "firstName": "Life is short smile while u have teeth ", "pic": "bg9.png" },
             { "id": 4, "firstName": "You'll never be braveif u dont get hurt", "pic": "bg10.png" },
-            { "id": 4, "firstName": "Wife or Mother, if it is both, he is twice blessed indeed", "pic": "bg10.png"},
+            { "id": 4, "firstName": "Wife or Mother, if it is both, he is twice blessed indeed", "pic": "bg11.png"},
             { "id": 4, "firstName": "The perfect woman u se is working, not an iddler ", "pic": "bg12.png" },
             { "id": 4, "firstName": "Great friends are hard to find", "pic": "bg13.png" },
             { "id": 4, "firstName": "Hard Times reveal true friends", "pic": "bg14.png" }
